@@ -13,7 +13,6 @@ import {Component, Input, Output, EventEmitter} from '@angular/core'
             <span class="pad-left">
             {{event.location.city}}, {{event.location.country}}</span>
         </div>
-        <button class="btn btn-primary" (click)="handleClickMe()">Click me!</button>
     </div>
     `,
     styles: [`
@@ -24,7 +23,6 @@ import {Component, Input, Output, EventEmitter} from '@angular/core'
 
 export class EventThumbnailComponent{
     @Input() event: any
-<<<<<<< HEAD
     someProperty: any = "David was here"
 
     logFoo(){
@@ -32,11 +30,5 @@ export class EventThumbnailComponent{
     }
     displayHello(){
         return "David Lam in displayHello";
-=======
-    @Output() eventClick = new EventEmitter()
-
-    handleClickMe(){
-        this.eventClick.emit(this.event.name)
->>>>>>> Communicatewithparentcomponent
     }
 }

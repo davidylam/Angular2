@@ -7,13 +7,8 @@ import { Component } from '@angular/core'
         <div>
             <h1>Upcomping Angular 2 Events</h1>
             <hr />
-<<<<<<< HEAD
             <event-thumbnail #thumbnail [event]="event1"></event-thumbnail>
             <button class="btn btn-primary" (click)="thumbnail.logFoo()">Log me some foo</button>
-=======
-            <nav-bar></nav-bar>
-            <event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event1"></event-thumbnail>
->>>>>>> Communicatewithparentcomponent
         </div>
         `
 })
