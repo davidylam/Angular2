@@ -7,6 +7,7 @@ import { Component } from '@angular/core'
         <div>
             <h1>Upcomping Angular 2 Events</h1>
             <hr />
+            <nav-bar></nav-bar>
             <event-thumbnail (eventClick)="handleEventClicked($event)" [event]="event1"></event-thumbnail>
         </div>
         `
