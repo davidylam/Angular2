@@ -10,13 +10,16 @@ export class EventService{
     getEvents(){
         return EVENTS;
     }
+    getEvent(id: number){
+      return EVENTS.find(event => event.id === id)
+    }
 }
 
 const EVENTS =
   [
     {
       id: 1,
-      name: 'Angular Connect',
+      name: 'Angular Connect id: 1',
       date: '9/26/2036',
       time: '10:00 am',
       price: 599.99,
@@ -90,7 +93,7 @@ const EVENTS =
     },
     {
       id: 2,
-      name: 'ng-nl',
+      name: 'ng-nl id:2 ',
       date: '4/15/2037',
       time: '9:00 am',
       price: 950.00,
