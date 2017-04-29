@@ -10,6 +10,9 @@ import { Router } from '@angular/router'
 })
 
 export class LoginComponent{//
+    selectedEmployee: any;
+
+    
     constructor(private authService: AuthService, private router: Router){}
     login(formValues){
         this.authService.loginUser(formValues.userName, formValues.password)
@@ -19,4 +22,13 @@ export class LoginComponent{//
         console.log("in cancel")
         this.router.navigate(['events'])
     }
+    displaySelected(yyy){
+        console.log(this.employee.firstName, this.employee.lastName)
+        debugger;
+    }
+    employee: any =[
+        {id: 1, firstName: "George", lastName:"Washington"},
+        {id: 2, firstName: "John", lastName:"Adams"},
+        {id: 3, firstName: "Thomas", lastName:"Jefferson"}
+    ]
 }

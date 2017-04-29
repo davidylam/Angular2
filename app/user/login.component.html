@@ -3,6 +3,11 @@
 <div class="col-md-4">
   <form #loginForm="ngForm" (ngSubmit)="login(loginForm.value)" autocomplete="off">
     <div class="form-group" >
+      <select  (change)="displaySelected($event.target.value)"  name="xxx">
+      <!--<select [(ngModel)]="selectedEmployee" #currentItem (change)="displaySelected(currentItem)"  name="xxx"> didn't work-->
+        <option *ngFor ="let item of employee"  [value]="item.id">{{item.firstName}} {{item.lastName}}</option>
+      </select>
+
       <label for="userName">User Name:</label>
             <em *ngIf="loginForm.controls.userName?.invalid && (loginForm.controls.userName?.touched || mouseoverLogin)">Required</em>
       <input (ngModel)="userName" name="userName" required="true" id="userName" type="text" class="form-control" placeholder="User Name..." />
