@@ -21,7 +21,7 @@ import { appRoutes } from './routes'
 import { Error404Component } from './errors/404.component'
 import { AuthService } from './user/auth.service'
 import { JQ_TOKEN, TOASTR_TOKEN, IToastr, CollapsibleWellComponent,
-  SimpleModalComponent } from './common/index'
+  SimpleModalComponent, ModalTriggerDirective } from './common/index'
 
 declare let toastr: IToastr
 declare let jQuery : Object
@@ -45,7 +45,8 @@ declare let jQuery : Object
     SessionListComponent,
     CollapsibleWellComponent,
     DurationPipe,
-    SimpleModalComponent
+    SimpleModalComponent,
+    ModalTriggerDirective
   ],
   providers: [
     EventService, 
